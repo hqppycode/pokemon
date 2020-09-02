@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Learning Next.js while practicing React and making a Pokemon game
