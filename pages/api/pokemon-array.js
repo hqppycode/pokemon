@@ -136,6 +136,7 @@ const arr = [
   "wigglytuff",
   "zapdos",
   "zubat",
+  "ash2"
 ];
 
 export default arr;

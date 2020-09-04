@@ -5,12 +5,11 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Timer from "../components/Timer";
-import Input from "../components/Input";
 import Footer from "../components/Footer";
 import arr from "../pages/api/pokemon-array";
 
 const Home = () => {
-  const [image, setImage] = useState(arr[0]);
+  const [image, setImage] = useState(arr[137]);
 
   return (
     <div className="container">
@@ -18,11 +17,11 @@ const Home = () => {
         <title>Pokémon</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <div className="app">
         <Header />
         <Main image={image} />
-        <Timer setImage={setImage} />
-        <Input image={image} setImage={setImage} />
+        <Timer image={image} setImage={setImage} />
         <Footer />
       </div>
 
