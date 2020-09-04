@@ -44,7 +44,7 @@ const Timer = ({
 
   const handleFocus = () => {
     setIsActive(true);
-    image === "ash2" ? setImage(arr[current]) : console.log("other");
+    image === "ash" ? setImage(arr[current]) : console.log("other");
   };
 
   useEffect(() => {
