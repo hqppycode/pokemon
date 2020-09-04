@@ -5,7 +5,9 @@ const GameOver = ({ current, reset }) => {
     <div className="container">
       <img className="gameover-img" src="/assets/images/happy-pikachu.png" />
       <p className="text">Wow! You got {current} pokemon!</p>
-      <button onClick={() => reset()} className="button">Play Again?</button>
+      <button onClick={() => reset()} className="button">
+        Play Again?
+      </button>
       {/* Styles */}
       <style jsx>{`
         .gameover-img {

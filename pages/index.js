@@ -11,9 +11,8 @@ import GameOver from "../components/GameOver";
 
 const Home = () => {
   const [image, setImage] = useState(arr[137]);
-  const [seconds, setSeconds] = useState(3);  // change this so you don't have to wait. Original is 151s
+  const [seconds, setSeconds] = useState(151); // change this so you don't have to wait. Original is 151s
   const [current, setCurrent] = useState(0);
-  const [play, setPlay] = useState(true);
   const [isActive, setIsActive] = useState(false);
   const [text, setText] = useState("");
 
@@ -53,7 +52,7 @@ const Home = () => {
             <Footer />
           </>
         ) : (
-          <GameOver current={current} setPlay={setPlay} reset={reset}/>
+          <GameOver current={current} reset={reset} />
         )}
       </div>
 
