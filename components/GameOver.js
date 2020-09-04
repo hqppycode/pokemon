@@ -3,7 +3,12 @@ import React from "react";
 const GameOver = ({ current, reset }) => {
   return (
     <div className="container">
-      <img className="gameover-img" src="/assets/images/pikachu.png" />
+      <img
+        className="gameover-img"
+        height="913"
+        width="1026"
+        src="/assets/images/pikachu.png"
+      />
       <p className="text">
         You caught <span>{current}</span> pokemon!
       </p>
@@ -14,6 +19,7 @@ const GameOver = ({ current, reset }) => {
       <style jsx>{`
         .gameover-img {
           width: 50%;
+          height: auto;
           display: block;
         }
         .container {
