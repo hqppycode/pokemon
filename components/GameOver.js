@@ -3,8 +3,10 @@ import React from "react";
 const GameOver = ({ current, reset }) => {
   return (
     <div className="container">
-      <img className="gameover-img" src="/assets/images/happy-pikachu.png" />
-      <p className="text">Wow! You got {current} pokemon!</p>
+      <img className="gameover-img" src="/assets/images/pikachu.png" />
+      <p className="text">
+        You caught <span>{current}</span> pokemon!
+      </p>
       <button onClick={() => reset()} className="button">
         Play Again?
       </button>
@@ -23,9 +25,17 @@ const GameOver = ({ current, reset }) => {
           margin-top: 2rem;
         }
         .text {
-          font-size: 4rem;
+          font-size: 3rem;
           font-weight: 500;
           margin: 0;
+          text-align: center;
+          color: #333;
+        }
+
+        span {
+          color: #ff0000;
+          font-weight: 700;
+          font-size: 5rem;
         }
         .button {
           background-color: #3a5da8;

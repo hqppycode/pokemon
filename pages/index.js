@@ -10,7 +10,7 @@ import arr from "../pages/api/pokemon-array";
 import GameOver from "../components/GameOver";
 
 const Home = () => {
-  const [image, setImage] = useState(arr[137]);
+  const [image, setImage] = useState(arr[151]);
   const [seconds, setSeconds] = useState(151); // change this so you don't have to wait. Original is 151s
   const [current, setCurrent] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -19,7 +19,7 @@ const Home = () => {
   function reset() {
     setSeconds(151);
     setIsActive(false);
-    setImage(arr[137]);
+    setImage(arr[151]);
     setCurrent(0);
     setText("");
   }

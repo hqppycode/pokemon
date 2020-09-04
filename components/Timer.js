@@ -27,7 +27,7 @@ const Timer = ({
 
   function toggle() {
     setIsActive(!isActive);
-    !isActive ? setImage(arr[current]) : setImage(arr[137]);
+    !isActive ? setImage(arr[current]) : setImage(arr[151]);
   }
 
   useEffect(() => {
