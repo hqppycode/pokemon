@@ -1,15 +1,22 @@
 // useInterval in React is dumb
 // https://upmostly.com/tutorials/build-a-react-timer-component-using-hooks
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import arr from "../pages/api/pokemon-array";
 
-const Timer = ({ image, setImage }) => {
-  const [seconds, setSeconds] = useState(151);
-  const [isActive, setIsActive] = useState(false);
-  const [current, setCurrent] = useState(0);
-  const [text, setText] = useState("");
-
+const Timer = ({
+  image,
+  setImage,
+  seconds,
+  setSeconds,
+  current,
+  setCurrent,
+  isActive,
+  setIsActive,
+  text,
+  setText,
+  reset,
+}) => {
   const handleKeyPress = (e) => {
     if (image === e.target.value.toLowerCase()) {
       setImage(arr[current + 1]);
@@ -21,14 +28,6 @@ const Timer = ({ image, setImage }) => {
   function toggle() {
     setIsActive(!isActive);
     !isActive ? setImage(arr[current]) : setImage(arr[137]);
-  }
-
-  function reset() {
-    setSeconds(151);
-    setIsActive(false);
-    setImage(arr[137]);
-    setCurrent(0);
-    setText("");
   }
 
   useEffect(() => {

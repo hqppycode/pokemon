@@ -7,9 +7,23 @@ import Main from "../components/Main";
 import Timer from "../components/Timer";
 import Footer from "../components/Footer";
 import arr from "../pages/api/pokemon-array";
+import GameOver from "../components/GameOver";
 
 const Home = () => {
   const [image, setImage] = useState(arr[137]);
+  const [seconds, setSeconds] = useState(3);  // change this so you don't have to wait. Original is 151s
+  const [current, setCurrent] = useState(0);
+  const [play, setPlay] = useState(true);
+  const [isActive, setIsActive] = useState(false);
+  const [text, setText] = useState("");
+
+  function reset() {
+    setSeconds(151);
+    setIsActive(false);
+    setImage(arr[137]);
+    setCurrent(0);
+    setText("");
+  }
 
   return (
     <div className="container">
@@ -19,10 +33,28 @@ const Home = () => {
       </Head>
 
       <div className="app">
-        <Header />
-        <Main image={image} />
-        <Timer image={image} setImage={setImage} />
-        <Footer />
+        {seconds >= 0 ? (
+          <>
+            <Header />
+            <Main image={image} />
+            <Timer
+              seconds={seconds}
+              setSeconds={setSeconds}
+              image={image}
+              setImage={setImage}
+              current={current}
+              setCurrent={setCurrent}
+              isActive={isActive}
+              setIsActive={setIsActive}
+              text={text}
+              setText={setText}
+              reset={reset}
+            />
+            <Footer />
+          </>
+        ) : (
+          <GameOver current={current} setPlay={setPlay} reset={reset}/>
+        )}
       </div>
 
       {/* Styles */}
