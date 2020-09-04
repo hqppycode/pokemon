@@ -69,7 +69,7 @@ const Timer = ({
         onChange={(e) => setText(e.target.value)}
         className="answer"
         type="text"
-        placeholder="Good luck!"
+        placeholder="Catch 'em!"
         onFocus={() => handleFocus()}
       />
 
