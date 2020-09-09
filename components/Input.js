@@ -19,12 +19,11 @@ const Input = ({ image, setImage }) => {
         onKeyUp={handleKeyPress}
         value={text}
         onChange={(e) => setText(e.target.value)}
-        onFocus={console.log('here')}
+        onFocus={console.log("here")}
         className="answer"
         type="text"
         placeholder="Good luck!"
       />
-
 
       {/* Styles */}
       <style jsx>{`

@@ -1,16 +1,26 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
-      <footer>Gotta type 'em all!</footer>
+      <Link href="/scores">
+        <a className="button">High Scores</a>
+      </Link>
 
       <style jsx>{`
-        footer {
+        .button {
+          background-color: #3a5da8;
+          color: #fff;
+          border: none;
+          outline: none;
+          font-size: 1.5rem;
+          width: 216px;
+          text-decoration: none;
           text-align: center;
-          margin-top: 0.5rem;
-          font-size: 1rem;
-          color: #333;
+          font-family: arial;
+          margin-top: 0.3rem;
+          padding: 0.3em 0;
         }
       `}</style>
     </>

@@ -47,9 +47,9 @@ const Timer = ({
     image === "ash" ? setImage(arr[current]) : console.log("other");
   };
 
-  useEffect(() => {
-    console.log(current, image);
-  }, [current, image]);
+  // useEffect(() => {
+  //   console.log(current, image);
+  // }, [current, image]);
 
   return (
     <div className="app">
